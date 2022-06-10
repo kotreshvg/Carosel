@@ -19,7 +19,7 @@ app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'./build','index.html'));
 })
 app.get('/:query',(req,res)=>{
-    axios.get(`https://api.unsplash.com/search/collections?query=${req.params.query}&orientation=landscape&per_page=15&client_id=77pYTx8fpgsrzMPzQ_X_2ZhZt3nnoHTJjcVmOE6a-6U`)
+    axios.get(`https://api.unsplash.com/search/collections?query=${req.params.query}&orientation=landscape&per_page=15&client_id=xxxxxxxxxxxxxxxxxxx`)
     .then((response)=>{
         console.log(response.data.results.length);
         res.send(JSON.stringify(response.data.results.map(sendback)));
